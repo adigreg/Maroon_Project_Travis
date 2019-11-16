@@ -21,7 +21,7 @@ const PageThree = ({pagestate,settingdoctor}) => {
     settingdoctor.doc.insurances.map(insurance=>insuranceSet.add(insurance.insurance_plan.name))
     return (
       <div>
-      <h3><strong>{settingdoctor.doc.profile.first_name + " " + settingdoctor.doc.profile.last_name}</strong></h3>
+      <h3 data-testid="PageThree"><strong>{settingdoctor.doc.profile.first_name + " " + settingdoctor.doc.profile.last_name}</strong></h3>
       
       <p className={classes.bio}>
         <Divider/>
