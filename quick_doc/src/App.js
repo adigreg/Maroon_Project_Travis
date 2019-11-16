@@ -20,6 +20,7 @@ import Box from '@material-ui/core/Box';
 import { sizing, spacing, positions } from '@material-ui/system';
 
 import {FilterMenu} from './filter.js';
+import PageThree from './PageThree.js';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCPlCnToFlfovuDUaAGesBUNLZw8DAxTnQ",
@@ -102,29 +103,6 @@ const pageThreeStyles = makeStyles(theme => ({
    marginTop: 20,
  }
 }));
-
-const PageThree = ({pagestate,settingdoctor}) => {
-  const classes = pageThreeStyles();
-  var insuranceSet = new Set();
-  settingdoctor.doc.insurances.map(insurance=>insuranceSet.add(insurance.insurance_plan.name))
-  return (
-    <div>
-    <h3><strong>{settingdoctor.doc.profile.first_name + " " + settingdoctor.doc.profile.last_name}</strong></h3>
-    
-    <p className={classes.bio}>
-      <Divider/>
-      {settingdoctor.doc.profile.bio}
-      <Divider/>
-    </p>
-    
-    <h1>Insurance Taken:</h1>
-    {Array.from(insuranceSet).map(insurance =>
-      <li>{insurance}</li>
-      )}
-    <Button className={classes.button} variant="contained" color="primary" align="center" size="large" onClick={function(event){pagestate.setpage(2)}}>go back</Button>
-    </div>
-  )
-}
 
 const pageOneStyles = makeStyles(theme => ({
   title: {
