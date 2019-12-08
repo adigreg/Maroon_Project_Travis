@@ -33,7 +33,7 @@ const PageThree = ({pagestate,settingdoctor}) => {
       {Array.from(insuranceSet).map(insurance =>
         <li>{insurance}</li>
         )}
-      <Button className={classes.button} variant="contained" color="primary" align="center" size="large" onClick={function(event){pagestate.setpage(2)}}>go back</Button>
+      <Button data-testid="Go Back" className={classes.button} variant="contained" color="primary" align="center" size="large" onClick={function(event){pagestate.setpage(2)}}>go back</Button>
       </div>
     )
   }
