@@ -144,7 +144,7 @@ const Pageone = ({pagestate, coordinatestate}) => {
         types={[]}
         componentRestrictions={{country: "usa"}}
     />
-    <Button size = "large" onClick = {switch_page}>
+    <Button data-cy="location" size = "large" onClick = {switch_page}>
       Search
     </Button>
     </Container>

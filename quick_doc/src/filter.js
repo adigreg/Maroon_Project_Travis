@@ -143,7 +143,7 @@ const DoctorCards = ({doctors, settingdoctor, pagestate}) => {
         <Grid container spacing={2} className={classes.grid}>       
         {doctors.map(doctor =>
           (<Grid item xs={6}>
-            <Card className={classes.card}>
+            <Card data-cy={"doctor" + doctor.profile.first_name + doctor.profile.last_name} className={classes.card}>
               <h1><strong>{doctor.profile.first_name + " " + doctor.profile.last_name}</strong></h1>
               <CardMedia><img src={doctor.profile.image_url}></img></CardMedia>
               <CardContent className={classes.content}>Located in {doctor.practices[0].visit_address.city + ", " + doctor.practices[0].visit_address.state}
