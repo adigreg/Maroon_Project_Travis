@@ -3,9 +3,9 @@ node_js:
   - "12"
 script:
   - npm test
-  - npm run build
 before_install:
   - cd quick_doc
 after_success:
+  - CI=false npm run build --project reactshopping-e88a1
   - npm install -g firebase-tools
   - firebase deploy --token 1//04zNRHu69n1OaCgYIARAAGAQSNwF-L9IrfFDU0Q-cdJHv6LUaUaz3dFaKRqD3x4fS5dAndFGcejEQyNJxYzlHhCIU4-quFqgFcyE --non-interactive
