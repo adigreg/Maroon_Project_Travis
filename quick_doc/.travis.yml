@@ -1,14 +1,12 @@
 language: node_js
 node_js:
-  - "12.13.0"
+  - "12"
 cache:
   directories:
   - node_modules
 script:
   - npm test
   - npm run build
-before_install:
-  - cd quick_doc
 after_success:
   - npm install -g firebase-tools
   - firebase deploy --token 1//04zNRHu69n1OaCgYIARAAGAQSNwF-L9IrfFDU0Q-cdJHv6LUaUaz3dFaKRqD3x4fS5dAndFGcejEQyNJxYzlHhCIU4-quFqgFcyE --non-interactive
